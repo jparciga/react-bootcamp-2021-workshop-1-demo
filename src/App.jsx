@@ -1,31 +1,21 @@
 import React from "react";
-import "./global.css";
+import { ThemeProvider } from "styled-components";
+import GlobalStyles from "./GlobalStyles";
+import RankingList from "./components/RankingList";
+import theme from "./config/theme";
+import mockedData from "./f1-pilots.json";
 
-const Person = (props) => (
-  <div className="person-container">
-    <h2>{props.name}</h2>
-    <div className="person-container__info">
-      <p>{props.email}</p>
-      <p>{props.telephone}</p>
-    </div>
-  </div>
-);
-
-const Hello = () => (
-  <div>
-    <h2>Counter: 1</h2>
-  </div>
-);
+const { items } = mockedData;
 
 export default function App() {
   return (
-    <div className="App">
-      {/*<Person
-        name="Jordan Walke"
-        email="jordan@facebook.com"
-        telephone="+1 (234) 567 8910"
-      />*/}
-      <Hello />
-    </div>
+    <>
+      <GlobalStyles />
+      <ThemeProvider theme={theme}>
+        <div className="app">
+          <RankingList title="F1 2020 standings" items={items} filter="none" />
+        </div>
+      </ThemeProvider>
+    </>
   );
 }
