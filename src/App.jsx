@@ -20,11 +20,11 @@ const Hello = () => (
 export default function App() {
   return (
     <div className="App">
-      <Person
+      {/*<Person
         name="Jordan Walke"
         email="jordan@facebook.com"
         telephone="+1 (234) 567 8910"
-      />
+      />*/}
       <Hello />
     </div>
   );
