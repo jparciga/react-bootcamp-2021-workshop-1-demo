@@ -13,7 +13,7 @@ const Person = (props) => (
 
 const Hello = () => (
   <div>
-    <h2>Counter: 1</h2>
+    <h2>Hello ⚛️!</h2>
   </div>
 );
 
