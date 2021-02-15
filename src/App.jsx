@@ -11,16 +11,11 @@ const Person = (props) => (
   </div>
 );
 
-const Hello = ({ count, label }) => {
-  console.log("render counter");
-
-  return (
-    <div>
-      <h2>Counter: {count}</h2>
-      <label>{label}</label>
-    </div>
-  );
-};
+const Hello = () => (
+  <div>
+    <h2>Counter: 0</h2>
+  </div>
+);
 
 export default function App() {
   return (
@@ -30,7 +25,7 @@ export default function App() {
         email="jordan@facebook.com"
         telephone="+1 (234) 567 8910"
       />
-      <Hello count={0} label="Hi" />
+      <Hello />
     </div>
   );
 }
