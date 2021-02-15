@@ -1,0 +1,63 @@
+{
+  "items": [
+    {
+      "id": 44,
+      "name": "Lewis Hamilton",
+      "country": {
+        "name": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿"
+      },
+      "team": "Mercedes",
+      "points": 347,
+      "rank": "1st",
+      "championships": {
+        "years": [2008, 2014, 2015, 2017, 2018, 2019, 2020]
+      }
+    },
+    {
+      "id": 77,
+      "name": "Valtteri Bottas",
+      "country": {
+        "name": "Finland",
+        "flag": "🇫🇮"
+      },
+      "team": "Mercedes",
+      "points": 223,
+      "rank": "2nd",
+      "championships": null
+    },
+    {
+      "id": 33,
+      "name": "Max Verstappen",
+      "country": {
+        "name": "Netherlands",
+        "flag": "🇳🇱"
+      },
+      "team": "Red Bull",
+      "points": 214,
+      "rank": "3rd"
+    },
+    {
+      "id": 11,
+      "name": "Sergio Pérez",
+      "country": {
+        "name": "Mexico",
+        "flag": "🇲🇽"
+      },
+      "team": "Racing Point",
+      "points": 125,
+      "rank": "4th"
+    },
+    {
+      "id": 3,
+      "name": "Daniel Ricciardo",
+      "country": {
+        "name": "Australia",
+        "flag": "🇦🇺"
+      },
+      "team": "Renault",
+      "points": 119,
+      "rank": "5th"
+    }
+  ]
+}
