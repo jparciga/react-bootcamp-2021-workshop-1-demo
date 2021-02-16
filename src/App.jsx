@@ -1,27 +1,29 @@
 import React from "react";
+import mockedData from "./f1-pilots.json";
 import "./global.css";
 
-const Person = (props) => (
+const Card = ({ title, text1, text2 }) => (
   <div className="person-container">
-    <h2>{props.name}</h2>
+    <h2>{title}</h2>
     <div className="person-container__info">
-      <p>{props.email}</p>
-      <p>{props.telephone}</p>
+      <p>{text1}</p>
+      <p>{text2}</p>
     </div>
   </div>
 );
 
-const Hello = () => <h2>Helloooo ⚛️!</h2>;
-
 export default function App() {
-  return (
-    <div className="App">
-      {/*<Person
-        name="Jordan Walke"
-        email="jordan@facebook.com"
-        telephone="+1 (234) 567 8910"
-      />*/}
-      <Hello />
-    </div>
-  );
+  const items = [];
+
+  mockedData.items.forEach(({ name, rank, country, team, points }) => {
+    items.push(
+      <Card
+        title={`${rank}. ${name} ${country.flag}`}
+        text1={team}
+        text2={`Points: ${points}`}
+      />
+    );
+  });
+
+  return <div className="App">{items}</div>;
 }
