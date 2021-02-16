@@ -11,11 +11,7 @@ const Person = (props) => (
   </div>
 );
 
-const Hello = () => (
-  <div>
-    <h2>Hello ⚛️!</h2>
-  </div>
-);
+const Hello = () => <h2>Hello ⚛️!</h2>;
 
 export default function App() {
   return (
