@@ -1,29 +1,26 @@
 import React from "react";
+import { createGlobalStyle, ThemeProvider } from "styled-components";
+import RankingList from "./components/RankingList";
 import mockedData from "./f1-pilots.json";
-import "./global.css";
+import theme from "./config/theme";
 
-const Card = ({ title, text1, text2 }) => (
-  <div className="person-container">
-    <h2>{title}</h2>
-    <div className="person-container__info">
-      <p>{text1}</p>
-      <p>{text2}</p>
-    </div>
-  </div>
-);
+const { items } = mockedData;
+
+const GlobalStyles = createGlobalStyle`
+  body {
+    font-family: sans-serif;
+    text-align: center;
+    margin: 0 0 15px 0;
+  }
+`;
 
 export default function App() {
-  const items = [];
-
-  mockedData.items.forEach(({ name, rank, country, team, points }) => {
-    items.push(
-      <Card
-        title={`${rank}. ${name} ${country.flag}`}
-        text1={team}
-        text2={`Points: ${points}`}
-      />
-    );
-  });
-
-  return <div className="App">{items}</div>;
+  return (
+    <ThemeProvider theme={theme}>
+      <div className="App">
+        <GlobalStyles />
+        <RankingList items={items} filter="none" title="F1 2020 Standings" />
+      </div>
+    </ThemeProvider>
+  );
 }
